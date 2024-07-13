@@ -1,0 +1,333 @@
+import { FocusArea } from "./types";
+
+const ACAD_YEAR = "2024-2025";
+
+export const NUSMODS_API_URL = `https://api.nusmods.com/v2/${ACAD_YEAR}/modules`;
+
+export const enum MODULE_TYPES {
+    PRIMARIES = "primaries",
+    ELECTIVES = "electives",
+
+}
+
+export const FOCUS_AREAS: FocusArea[] = [
+    {
+        slug: "algorithms-theory",
+        title: "Algorithms & Theory",
+        description:
+            "This focus area explores the fundamental theories that underpin computation and information as well as algorithmic techniques to solve computational problems.",
+        primaries: [
+            {
+                code: "CS3230",
+                title: "Design and Analysis of Algorithms (CFM)",
+            },
+            { code: "CS3231", title: "Theory of Computation" },
+            { code: "CS3236", title: "Introduction to Information Theory" },
+            { code: "CS4231", title: "Parallel and Distributed Algorithms" },
+            {
+                code: "CS4232",
+                title: "Theory of Computation (no longer offered in AY2021-22)",
+            },
+            { code: "CS4234", title: "Optimisation Algorithms" },
+        ],
+        electives: [
+            { code: "CS3233", title: "Competitive Programming" },
+            { code: "CS4257", title: "Algorithmic Foundations of Privacy" },
+            { code: "CS4261", title: "Algorithmic Mechanism Design" },
+            { code: "CS4268", title: "Quantum Computing" },
+            {
+                code: "CS4269",
+                title: "Fundamentals of Logic in Computer Science",
+            },
+            {
+                code: "CS4330",
+                title: "Combinatorial Methods in Bioinformatics",
+            },
+            { code: "CS5230", title: "Computational Complexity" },
+            { code: "CS5234", title: "Algorithms at Scale" },
+            { code: "CS5236", title: "Advanced Automata Theory" },
+            {
+                code: "CS5237",
+                title: "Computational Geometry and Applications",
+            },
+            {
+                code: "CS5238",
+                title: "Advanced Combinatorial Methods in Bioinformatics",
+            },
+            { code: "CS5330", title: "Randomized Algorithms" },
+        ],
+    },
+    {
+        slug: "artificial-intelligence",
+        title: "Artificial Intelligence",
+        description:
+            "Artificial Intelligence (AI) is the branch of computer science that aims to create intelligent machines and includes topics on learning, reasoning, planning, perception, language understanding, knowledge representation, and robotics.",
+        primaries: [
+            {
+                code: "CS2109S",
+                title: "Introduction to AI and Machine Learning (CFM)",
+            },
+            {
+                code: "CS3243",
+                title: "Introduction to Artificial Intelligence",
+            },
+            { code: "CS3244", title: "Machine Learning" },
+            { code: "CS3263", title: "Foundations of Artificial Intelligence" },
+            { code: "CS3264", title: "Foundations of Machine Learning" },
+            {
+                code: "CS4243",
+                title: "Computer Vision and Pattern Recognition",
+            },
+            { code: "CS4244", title: "Knowledge Representation and Reasoning" },
+            { code: "CS4246", title: "AI Planning and Decision Making" },
+            { code: "CS4248", title: "Natural Language Processing" },
+        ],
+        electives: [
+            {
+                code: "CS4220",
+                title: "Knowledge Discovery Methods in Bioinformatics",
+            },
+            { code: "CS4261", title: "Algorithmic Mechanism Design" },
+            {
+                code: "CS4269",
+                title: "Fundamentals of Logic in Computer Science",
+            },
+            { code: "CS4277", title: "3D Computer Vision" },
+            {
+                code: "CS4278",
+                title: "Intelligent Robots: Algorithms and Systems",
+            },
+            { code: "CS5215", title: "Constraint Processing" },
+            { code: "CS5228", title: "Knowledge Discovery and Data Mining" },
+            { code: "CS5242", title: "Neural Networks and Deep Learning" },
+            { code: "CS5260", title: "Neural Networks and Deep Learning II" },
+            { code: "CS5340", title: "Uncertainty Modelling in AI" },
+            {
+                code: "CS5339",
+                title: "Theory and Algorithms for Machine Learning",
+            },
+        ],
+    },
+    {
+        slug: "computer-graphics-games",
+        title: "Computer Graphics and Games",
+        description:
+            "This focus area covers the fundamentals of computer graphics algorithms and techniques as well as its applications to developing computer games.",
+        primaries: [
+            { code: "CS3241", title: "Computer Graphics" },
+            { code: "CS3242", title: "3D Modelling and Animation" },
+            { code: "CS3247", title: "Game Development" },
+            { code: "CS4247", title: "Graphics Rendering Techniques" },
+            { code: "CS4350", title: "Game Development Project" },
+        ],
+        electives: [
+            {
+                code: "CS3218",
+                title: "Multimodal Processing in Mobile Platforms",
+            },
+            { code: "CS3240", title: "Interaction Design" },
+            { code: "CS3249", title: "User Interface Development" },
+            {
+                code: "CS4240",
+                title: "Interaction Design for Virtual and Augmented Reality",
+            },
+            {
+                code: "CS4243",
+                title: "Computer Vision and Pattern Recognition",
+            },
+            { code: "CS4249", title: "Phenomena and Theories of HCI" },
+            { code: "CS4351", title: "Real-time Graphics" },
+            {
+                code: "CS5237",
+                title: "Computational Geometry and Applications",
+            },
+            { code: "CS5240", title: "Theoretical Foundation of Multimedia" },
+            { code: "CS5343", title: "Advanced Computer Animation" },
+            { code: "CS5346", title: "Information Visualisation" },
+        ],
+    },
+    {
+        slug: "computer-security",
+        title: "Computer Security",
+        description:
+            "This focus area covers the principles and practice of protecting computer systems from malicious attacks and information theft.",
+        primaries: [
+            { code: "CS2107", title: "Introduction to Information Security" },
+            { code: "CS3235", title: "Computer Security" },
+            { code: "CS4236", title: "Cryptography Theory and Practice" },
+            { code: "CS4230", title: "Foundations of Modern Cryptography" },
+            { code: "CS4238", title: "Computer Security Practice" },
+            { code: "CS4239", title: "Software Security" },
+        ],
+        electives: [
+            {
+                code: "CS3221",
+                title: "Operating Systems Design and Pragmatics",
+            },
+            { code: "CS4257", title: "Algorithmic Foundations of Privacy" },
+            { code: "CS4276", title: "IoT Security" },
+            { code: "CS5231", title: "Systems Security" },
+            { code: "CS5250", title: "Advanced Operating Systems" },
+            { code: "CS5321", title: "Network Security" },
+            { code: "CS5322", title: "Database Security" },
+            { code: "CS5331", title: "Web Security" },
+            { code: "CS5332", title: "Biometric Authentication" },
+            { code: "IFS4101", title: "Legal Aspects of Information Security" },
+            { code: "IFS4102", title: "Digital Forensics" },
+            { code: "IFS4103", title: "Penetration Testing Practice" },
+        ],
+    },
+    {
+        slug: "database-systems",
+        title: "Database Systems",
+        description:
+            "The Database Systems area delves into the design principles, implementation techniques, and applications of systems for data management and analytics.",
+        primaries: [
+            { code: "CS2102", title: "Database Systems" },
+            { code: "CS3223", title: "Database Systems Implementation" },
+            {
+                code: "CS4221",
+                title: "Database Applications Design and Tuning",
+            },
+            { code: "CS4224", title: "Distributed Databases" },
+            { code: "CS4225", title: "Big Data Systems for Data Science" },
+        ],
+        electives: [
+            {
+                code: "CS4220",
+                title: "Knowledge Discovery Methods in Bioinformatics",
+            },
+            { code: "CS5226", title: "Database Tuning" },
+            { code: "CS5228", title: "Knowledge Discovery and Data Mining" },
+            { code: "CS5322", title: "Database Security" },
+        ],
+    },
+    {
+        slug: "multimedia-information-retrieval",
+        title: "Multimedia Information Retrieval",
+        description:
+            "Through this focus area, students learn how to retrieve relevant information from a vast amount of unstructured multimedia data (text, image, audio, video).",
+        primaries: [
+            { code: "CS2108", title: "Introduction to Media Computing" },
+            { code: "CS3245", title: "Information Retrieval" },
+            { code: "CS4242", title: "Social Media Computing" },
+            { code: "CS4248", title: "Natural Language Processing" },
+            { code: "CS4347", title: "Sound and Music Computing" },
+        ],
+        electives: [
+            { code: "CS5246", title: "Text Mining" },
+            { code: "CS5241", title: "Speech Processing" },
+        ],
+    },
+    {
+        slug: "networking-distributed-systems",
+        title: "Networking and Distributed Systems",
+        description:
+            "This area focuses on how computing devices can be interconnected and how they can work together in a distributed manner to perform computations and disseminate information.",
+        primaries: [
+            {
+                code: "CS2105",
+                title: "Introduction to Computer Networks (CFM)",
+            },
+            { code: "CS3103", title: "Computer Networks Practice" },
+            { code: "CS4222", title: "Wireless Networking" },
+            { code: "CS4226", title: "Internet Architecture" },
+            { code: "CS4231", title: "Parallel and Distributed Algorithms" },
+        ],
+        electives: [
+            { code: "CS3237", title: "Introduction to Internet of Things" },
+            { code: "CS4344", title: "Networked and Mobile Gaming" },
+            { code: "CS5223", title: "Distributed Systems" },
+            { code: "CS5224", title: "Cloud Computing" },
+            { code: "CS5229", title: "Advanced Computer Networks" },
+            { code: "CS5248", title: "Systems Support for Continuous Media" },
+            { code: "CS5321", title: "Network Security" },
+        ],
+    },
+    {
+        slug: "parallel-computing",
+        title: "Parallel Computing",
+        description:
+            "This focus area aims to give students the skills to understand parallelism and to architect algorithms, programs, and solutions that can take full advantage of the latest hardware.",
+        primaries: [
+            { code: "CS3210", title: "Parallel Computing" },
+            { code: "CS3211", title: "Parallel and Concurrent Programming" },
+            { code: "CS4231", title: "Parallel and Distributed Algorithms" },
+            { code: "CS4223", title: "Multi-core Architecture" },
+        ],
+        electives: [
+            { code: "CS5222", title: "Advanced Computer Architectures" },
+            { code: "CS5223", title: "Distributed Systems" },
+            { code: "CS5224", title: "Cloud Computing" },
+            { code: "CS5239", title: "Computer System Performance Analysis" },
+            { code: "CS5250", title: "Advanced Operating Systems" },
+        ],
+    },
+    {
+        slug: "programming-languages",
+        title: "Programming Languages",
+        description:
+            "The abstractions and expressive power of programming languages underlie how programmers communicate their intention to machines. This focus area studies the design and implementation of programming languages and the principles behind associated tools.",
+        primaries: [
+            { code: "CS2104", title: "Programming Language Concepts" },
+            { code: "CS3211", title: "Parallel and Concurrent Programming" },
+            { code: "CS4212", title: "Compiler Design" },
+            { code: "CS4215", title: "Programming Language Implementation" },
+        ],
+        electives: [
+            { code: "CS3234", title: "Logic for Proofs and Programs" },
+            { code: "CS4216", title: "Constraint Logic Programming" },
+            {
+                code: "CS5232",
+                title: "Formal Specification & Design Techniques",
+            },
+            { code: "CS5214", title: "Design of Optimising Compilers" },
+            { code: "CS5215", title: "Constraint Processing" },
+            {
+                code: "CS5218",
+                title: "Principles and Practice of Program Analysis",
+            },
+        ],
+    },
+    {
+        slug: "software-engineering",
+        title: "Software Engineering",
+        description:
+            "Building complex software that is correct and robust requires a systematic and disciplined approach. This focus area equips students with the technical knowledge to model, design, build, verify, and test software.",
+        primaries: [
+            { code: "CS2103/T", title: "Software Engineering (CFM)" },
+            { code: "CS3213", title: "Foundations of Software Engineering" },
+            {
+                code: "CS3219",
+                title: "Software Engineering Principles and Patterns",
+            },
+            {
+                code: "CS4211",
+                title: "Formal Methods for Software Engineering",
+            },
+            { code: "CS4218", title: "Software Testing" },
+            { code: "CS4239", title: "Software Security" },
+        ],
+        electives: [
+            { code: "CS3203", title: "Software Engineering Project*" },
+            { code: "CS3281", title: "Thematic Systems Project I*" },
+            { code: "CS3282", title: "Thematic Systems Project II*" },
+            {
+                code: "CS3216",
+                title: "Software Development on Evolving Platforms",
+            },
+            {
+                code: "CS3217",
+                title: "Software Engineering on Modern Application Platforms",
+            },
+            { code: "CS3226", title: "Web Programming and Applications" },
+            { code: "CS3234", title: "Logic for Proofs and Programs" },
+            { code: "CS5219", title: "Automatic Software Validation" },
+            {
+                code: "CS5232",
+                title: "Formal Specification & Design Techniques",
+            },
+            { code: "CS5272", title: "Embedded Software Design" },
+        ],
+    },
+];
