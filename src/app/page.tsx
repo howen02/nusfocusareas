@@ -1,26 +1,49 @@
 import { Button } from "@/components/ui/button";
-import { Card } from "@/components/ui/card";
-import { FOCUS_AREAS } from "@/constants";
+import { Calculator, LightbulbIcon, Search } from "lucide-react";
 import Link from "next/link";
 
 export default async function Home() {
     return (
-        <main className="flex flex-col flex-grow justify-center items-centern gap-4">
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-5 gap-4">
-                {FOCUS_AREAS.map((focusArea) => {
-                    return (
-                        <Link
-                            key={focusArea.slug}
-                            href={`/focusArea/${focusArea.slug}`}
+        <main className="flex flex-grow justify-center items-center">
+            <div className="flex flex-col items-center gap-4 text-center">
+                <h1 className="text-4xl sm:text-6xl font-semibold">
+                    NUSFOCUSAREAS.com
+                </h1>
+                <h2 className="text-lg sm:text-xl text-slate-400">
+                    Helping you choose your focus area in Computer Science
+                </h2>
+                <div className="flex">
+                    <Link href="/focus-area">
+                        <Button
+                            variant={"link"}
+                            className="flex items-center text-base sm:text-lg"
                         >
-                            <Card className="aspect-square p-4 flex justify-center items-center transform transition-transform duration-300 hover:-translate-y-1">
-                                <p className="text-center text-xl">
-                                    {focusArea.title}
-                                </p>
-                            </Card>
-                        </Link>
-                    );
-                })}
+                            <Search className="pr-2" />
+                            Explorer
+                        </Button>
+                    </Link>
+                    <Link href="/calculator">
+                        <Button
+                            variant={"link"}
+                            className="flex items-center text-base sm:text-lg"
+                        >
+                            <Calculator className="pr-2" />
+                            Checker
+                        </Button>
+                    </Link>
+                </div>
+                <div className="flex items-center text-slate-400">
+                    <LightbulbIcon className="p-1" />
+                    <h3 className="text-sm">
+                        Powered by:{" "}
+                        <a
+                            href={"https://api.nusmods.com/v2/"}
+                            className="hover:underline"
+                        >
+                            NUSModsAPI v2
+                        </a>
+                    </h3>
+                </div>
             </div>
         </main>
     );
