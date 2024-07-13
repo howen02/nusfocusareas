@@ -2,12 +2,12 @@ import { FocusArea } from "./types";
 
 const ACAD_YEAR = "2024-2025";
 
+export const ALL_MODULES_URL = `https://api.nusmods.com/v2/${ACAD_YEAR}/moduleList.json`;
 export const NUSMODS_API_URL = `https://api.nusmods.com/v2/${ACAD_YEAR}/modules`;
 
 export const enum MODULE_TYPES {
     PRIMARIES = "primaries",
     ELECTIVES = "electives",
-
 }
 
 export const FOCUS_AREAS: FocusArea[] = [

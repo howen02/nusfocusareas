@@ -9,7 +9,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
     const focusArea = getFocusArea(params.slug);
 
     return (
-        <main className="flex flex-col gap-6 min-h-screen p-24">
+        <main className="flex flex-col gap-6 min-h-screen">
             <div>
                 <h1 className="text-3xl font-semibold">{focusArea?.title}</h1>
                 <p className="text-lg text-slate-700 pt-4">
