@@ -6,7 +6,7 @@ export default async function Home() {
     return (
         <main className="flex flex-grow justify-center items-center">
             <div className="flex flex-col items-center gap-4 text-center">
-                <h1 className="text-4xl sm:text-6xl font-semibold">
+                <h1 className="text-3xl sm:text-4xl md:text-6xl font-semibold">
                     NUSFOCUSAREAS.com
                 </h1>
                 <h2 className="text-lg sm:text-xl text-slate-400">

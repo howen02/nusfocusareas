@@ -5,12 +5,24 @@ import ModuleTag from "@/components/moduleTag";
 import { Button } from "@/components/ui/button";
 import { ALL_MODULES } from "@/constants";
 import { FocusArea, ModuleProps } from "@/types";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function Page() {
     const [modules, setModules] = useState<ModuleProps[]>([]);
     const [focusAreas, setFocusAreas] = useState<FocusArea[]>([]);
     const [isLoading, setLoading] = useState(false);
+    const [screenWidth, setScreenWidth] = useState<number>(0);
+
+    useEffect(() => {
+        const updateWidth = () => {
+            setScreenWidth(window.innerWidth);
+        };
+
+        updateWidth();
+        window.addEventListener("resize", updateWidth);
+
+        return () => window.removeEventListener("resize", updateWidth);
+    }, []);
 
     const addModule = (module: ModuleProps) => {
         const moduleExists = modules.some((m) => m.code === module.code);
@@ -41,6 +53,13 @@ export default function Page() {
             setLoading(false);
         }
     }
+
+    if (screenWidth < 640)
+        return (
+            <div className="flex flex-grow flex-col justify-center items-center">
+                <p>Mobile view not supported</p>
+            </div>
+        );
 
     return (
         <div className="flex flex-col gap-6 max-h-screen">
