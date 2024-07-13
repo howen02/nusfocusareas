@@ -16,7 +16,7 @@ const ModuleSection: React.FC<ModuleSectionProps> = ({ focusArea, type }) => {
             </h2>
             <div className="gap-2 grid grid-cols-2">
                 {focusArea[type].map((module) => (
-                    <Link href={`/module/${module.code}`}>
+                    <Link key={module.code} href={`/module/${module.code}`}>
                         <ModuleCard module={module} />
                     </Link>
                 ))}

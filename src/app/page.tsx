@@ -8,7 +8,10 @@ export default async function Home() {
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-5 gap-4">
                 {FOCUS_AREAS.map((focusArea) => {
                     return (
-                        <Link href={`/focusArea/${focusArea.slug}`}>
+                        <Link
+                            key={focusArea.slug}
+                            href={`/focusArea/${focusArea.slug}`}
+                        >
                             <Card className="aspect-square p-4 flex justify-center items-center transform transition-transform duration-300 hover:-translate-y-1">
                                 <p className="text-center text-xl">
                                     {focusArea.title}
